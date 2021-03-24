@@ -91,7 +91,7 @@ nav ul li a{
     display: flex;
     padding: 10px 24px;
     opacity: 0;
-    color: #000;
+    color: gray;
     font-size: 13px;
     font-weight: 600;
     letter-spacing: 1.2px;
@@ -115,7 +115,7 @@ nav ul li a{
     display: block;
     width: 20px;
     height: 2px;
-    background: #000;
+    background:gray;
     border-radius: 2px;
     margin-left: 14px;
   }
@@ -133,7 +133,7 @@ nav ul li a{
     transform: rotate(45deg);
   }
   #nav:checked + .nav-btn i {
-    background: #000;
+    background: gray;
     transition: transform 0.2 ease;
   }
   #nav:checked + .nav-btn i:nth-child(1) {
