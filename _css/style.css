@@ -127,7 +127,7 @@ nav ul li a{
     display: block;
     width: 20px;
     height: 2px;
-    background: #000;
+    background: #fff;
     border-radius: 2px;
     margin-left: 14px;
   }
