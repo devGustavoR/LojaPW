@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 html {
   margin: 0;
   padding: 0;
@@ -7,10 +10,15 @@ html {
 nav{
   padding: 9px;
 }
+.logo {
+  float: left;
+  padding: 8px;
+  margin-left: 16px;
+  margin-top: 8px;
+  margin-bottom: 35px;
+}
 nav ul {
-  display:flex;
-  justify-content: center;
-  align-items: center;
+  float: right;
 }
 
 nav ul li{
@@ -28,7 +36,7 @@ nav ul li a{
   color: black;
   text-transform: uppercase;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 13px;
   letter-spacing: 1.2px;
   font-weight: 600;
 }
@@ -37,6 +45,9 @@ nav ul li a{
 }
 /*Parte da responsividade*/
 @media screen and (max-width: 864px) {
+  .logo {
+    padding: 0;
+  }
   .nav-wrapper {
     position: fixed;
     top: 0;
@@ -58,6 +69,7 @@ nav ul li a{
     display: block;
     float: none;
     width: 100%;
+    text-align: right;
     margin-bottom: 10px;
   }
   .nav-wrapper ul li:nth-child(1) a {
@@ -76,14 +88,17 @@ nav ul li a{
     margin-left: 0;
   }
   .nav-wrapper ul li a {
+    display: flex;
     padding: 10px 24px;
     opacity: 0;
     color: #000;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 600;
     letter-spacing: 1.2px;
     transform: translateY(-20px);
     transition: all 0.2s ease;
+    justify-content: center;
+    align-items: center;
   }
   .nav-btn {
     position: absolute;
