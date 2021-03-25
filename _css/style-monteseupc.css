@@ -12,6 +12,7 @@ html {
   /*background: -webkit-gradient(linear, left top, left bottom, from(#0e249c), to(#0D1940));*/
   background-color: #0d0d0d;
 }
+/*Barra de navegação*/
 nav{
   padding: 9px;
 }
@@ -60,6 +61,7 @@ nav ul li a{
 .hidden{
   display:none;
 }
+/*Fim da barra de navegação*/
 /*Parte da responsividade*/
 @media screen and (max-width: 864px) {
   .logo {
@@ -176,9 +178,14 @@ nav ul li a{
   }
 }
 /*Fim da parte da responsividade*/
+
+/*Configuração da imagem inicial*/
 #slide img{
   width: 100%;
 }
+/*Fim da configuração da imagem*/
+
+/*Linha de separação*/
 .row1{
   height: 70px;
 }
@@ -186,29 +193,8 @@ nav ul li a{
   background-color: white; 
   height: 4px;
 }
-header{
-  margin:30px 0px 0 0px;
-  display: flex;
-  flex-direction:row;
-}
-.d3 img{
-  margin-right: 5px;
-  width: 100%;
-  height: 500px;
-}
-.gg2{
+/*Fim da linha de separação*/
 
-  display:flex;
-  flex-direction: column-reverse;
-}
-.gg2 .b1 img{
-  width: 100%;
-  height: 245px;
-}
-.gg2 .b2 img{
-  width: 100%;
-  height: 249px;
-}
 /* Box nova*/
 .box-central{
  display: flex;
@@ -227,22 +213,6 @@ header{
 }
 .box:hover{
   height: 400px;
-}
-.box .imgBx{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  padding: 7px;
-  box-sizing: border-box;
-
-}
-.box .imgBx img{
-  max-width: 100%;
-  opacity: 1;
-  transition: 0.5s;
-  
 }
 .box::before{
   content: "";
@@ -280,26 +250,6 @@ header{
 .box:hover .content {
   opacity: 1;
 }
-.box:hover .botao{
-  opacity: 1;
-}
-.box .botao{
-  display: flex;
-  position: absolute;
-  bottom: 5px;
-  left: 5px;
-  right: 5px;
-  justify-content: center;
-  align-items: center;
-  text-align: justify;
-  opacity: 0;
-  border-radius: 9px;
-}
-.box .botao .compra{
-  background-color: green;
-  color: #fff;
-  
-}
 .box .c {
   position: absolute;
   bottom: -3px;
@@ -321,7 +271,50 @@ header{
   letter-spacing: 1px;
 
 }
+.box .imgBx{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 7px;
+  box-sizing: border-box;
+
+}
+.box .imgBx img{
+  max-width: 100%;
+  opacity: 1;
+  transition: 0.5s; 
+}
+.box:hover .botao{
+  opacity: 1;
+}
+.box .botao{
+  display: flex;
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  right: 5px;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+  opacity: 0;
+  border-radius: 9px;
+}
+.box .botao .compra{
+  background-color: green;
+  color: #fff;
+}
+.box .botao a {
+  color: #f2efeb;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 10px;
+  letter-spacing: 0px;
+  text-decoration: none;
+}
 .box:before,
 .box:after {
   background: linear-gradient(235deg, #FF2400, #010615, #ffa500);
 }
+/*Fim da box nova*/

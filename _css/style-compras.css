@@ -62,7 +62,6 @@ nav ul li a{
   display:none;
 }
 /*Fim da barra de navegação*/
-
 /*Parte da responsividade*/
 @media screen and (max-width: 864px) {
   .logo {
@@ -180,51 +179,11 @@ nav ul li a{
 }
 /*Fim da parte da responsividade*/
 
-/*Configuração do slider*/
-#slide{
-  overflow: hidden;
+/*Configuração da imagem inicial*/
+#slide img{
+  width: 100%;
 }
-#slide figure{
-  position: relative;
-  width: 500%;
-  margin: 0;
-  left: 0;
-  animation: slider 10s linear infinite;
-}
-#slide img {
-  width: 20%;
-  float: left;
-}
-@keyframes slider{
-  0%{
-    left: 0;
-  }
-  20%{
-    left: 0;
-  }
-  25%{
-    left: -100%;
-  }
-  45%{
-    left: -100%;
-  }
-  50%{
-    left: -200%;
-  }
-  70%{
-    left: -200%;
-  }
-  75%{
-    left: -300%;
-  }
-  95%{
-    left: -300%;
-  }
-  100%{
-    left: -400%;
-  }
-}
-/*Fim da configuração do slide*/
+/*Fim da configuração da imagem*/
 
 /*Linha de separação*/
 .row1{
@@ -235,6 +194,64 @@ nav ul li a{
   height: 4px;
 }
 /*Fim da linha de separação*/
-.fotos img{
-width: 100%;
+.boracomprar{
+  display: flex;
+  margin-top: 20px;
+  margin-left: 19px;
+  margin-right: 19px;
+  background-color: white;
+  height: 600px;
+}
+.boracomprar .imgpc{
+  width: 70%;
+  padding: 7px;
+  box-sizing: border-box;
+
+}
+.boracomprar .imgpc img{
+  max-width: 100%; 
+}
+.boracomprar .preco .pp-central{
+  display: flex;
+}
+.boracomprar .preco .pp-central .pp1{
+  display: flex;
+  margin-bottom: -10px;
+  justify-content: center;
+  align-items: center;
+}
+.boracomprar .preco .pp-central .pp1 img{
+width: 70px;
+height: 70px;
+}
+.boracomprar .preco .pp-central .pp1 p{
+  color: #000;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size:  12px;
+  letter-spacing: 0px;
+  text-decoration: none;
+  
+}
+.boracomprar .preco .pp-central .pp2{
+  display: flex;
+  margin-bottom: -10px;
+  margin-left: 30px;
+  justify-content: center;
+  align-items: center;
+}
+.boracomprar .preco .pp-central .pp2 img{
+justify-content: center;
+align-items: center;
+width: 70px;
+height: 70px;
+}
+
+.boracomprar .preco .pp-central .pp2 p{
+  color: #000;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size:  12px;
+  letter-spacing: 0px;
+  text-decoration: none;
 }
