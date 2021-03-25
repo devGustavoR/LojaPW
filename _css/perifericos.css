@@ -28,6 +28,14 @@ nav{
   margin-top: 8px;
   margin-bottom: 15px;
 }
+.logo a {
+  color: #f2efeb;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 0px;
+  text-decoration: none;
+}
 nav ul {
   float: right;
 }
