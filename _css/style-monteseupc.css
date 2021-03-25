@@ -210,6 +210,9 @@ header{
   height: 249px;
 }
 /* Box nova*/
+.box-central{
+ display: flex;
+}
 .box{
   position:relative;
   width: 268px;
@@ -218,7 +221,7 @@ header{
   justify-content: center;
   align-items: center;
   margin: 40px;
-  margin-top: 153px;
+  margin-top: 100px;
   transition: 0.5s;
   background: #310000;
 }
@@ -277,11 +280,32 @@ header{
 .box:hover .content {
   opacity: 1;
 }
+.box:hover .botao{
+  opacity: 1;
+}
+.box .botao{
+  display: flex;
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  right: 5px;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+  opacity: 0;
+  border-radius: 9px;
+}
+.box .botao .compra{
+  background-color: green;
+  color: #fff;
+  
+}
 .box .c {
   position: absolute;
   bottom: -3px;
   left: 5px;
   right: 5px;
+  margin-bottom: 7px;
   justify-content: center;
   align-items: center;
   text-align: justify;
