@@ -1,21 +1,32 @@
+@import url(./fonts.css);
 * {
   box-sizing: border-box;
 }
-html {
+html,body {
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100vh;
+  font-family: "Poppins";
+  /*background: -webkit-gradient(linear, left top, left bottom, from(#0e249c), to(#0D1940));*/
+  background-color: #0d0d0d;
 }
 nav{
   padding: 9px;
+}
+.row1{
+  height: 70px;
+}
+.row2 .col{
+  background-color: white; 
+  height: 4px;
 }
 .logo {
   float: left;
   padding: 8px;
   margin-left: 16px;
   margin-top: 8px;
-  margin-bottom: 35px;
+  margin-bottom: 15px;
 }
 nav ul {
   float: right;
@@ -33,7 +44,7 @@ nav ul li:last-child{
 nav ul li a{
   display: inline-block;
   outline: none;
-  color: black;
+  color: #fff;
   text-transform: uppercase;
   text-decoration: none;
   font-size: 13px;
@@ -47,6 +58,7 @@ nav ul li a{
 @media screen and (max-width: 864px) {
   .logo {
     padding: 0;
+    width: 33%;
   }
   .nav-wrapper {
     position: fixed;
@@ -91,7 +103,7 @@ nav ul li a{
     display: flex;
     padding: 10px 24px;
     opacity: 0;
-    color: gray;
+    color: #000;
     font-size: 13px;
     font-weight: 600;
     letter-spacing: 1.2px;
@@ -115,7 +127,7 @@ nav ul li a{
     display: block;
     width: 20px;
     height: 2px;
-    background:gray;
+    background: #fff;
     border-radius: 2px;
     margin-left: 14px;
   }
@@ -133,7 +145,7 @@ nav ul li a{
     transform: rotate(45deg);
   }
   #nav:checked + .nav-btn i {
-    background: gray;
+    background: #000;
     transition: transform 0.2 ease;
   }
   #nav:checked + .nav-btn i:nth-child(1) {
