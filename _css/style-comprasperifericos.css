@@ -194,6 +194,11 @@ nav ul li a{
   height: 4px;
 }
 /*Fim da linha de separação*/
+.imgpagcompra img{
+  height: 600px;
+  width: 600px;
+
+}
 .boracomprar{
   display: flex;
   margin-top: 20px;
@@ -253,5 +258,93 @@ height: 70px;
   font-weight: 700;
   font-size:  12px;
   letter-spacing: 0px;
+  text-decoration: none;
+}
+.boracomprar{
+  display: flex;
+  margin-top: 20px;
+  margin-left: 19px;
+  margin-right: 19px;
+  background-color: white;
+  height: 600px;
+}
+.boracomprar .imgpc{
+  width: 45%;
+  padding: 7px;
+  box-sizing: border-box;
+
+}
+.boracomprar .imgpc img{
+  max-width: 100%; 
+}
+.boracomprar .preco .pp-central{
+  display: flex;
+}
+.boracomprar .preco .pp-central .pp1{
+  display: flex;
+  margin-bottom: -10px;
+  justify-content: center;
+  align-items: center;
+}
+.boracomprar .preco .pp-central .pp1 img{
+width: 70px;
+height: 70px;
+}
+.boracomprar .preco .pp-central .pp1 p{
+  color: #000;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size:  12px;
+  letter-spacing: 0px;
+  text-decoration: none;
+  
+}
+.boracomprar .preco .pp-central .pp2{
+  display: flex;
+  margin-bottom: -10px;
+  margin-left: 30px;
+  justify-content: center;
+  align-items: center;
+}
+.boracomprar .preco .pp-central .pp2 img{
+justify-content: center;
+align-items: center;
+width: 70px;
+height: 70px;
+}
+
+.boracomprar .preco .pp-central .pp2 p{
+  color: #000;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size:  12px;
+  letter-spacing: 0px;
+  text-decoration: none;
+}
+.boracomprar .preco .outrasformas{
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.boracomprar .preco .outrasformas p{
+  color: #000;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size:  12px;
+  letter-spacing: 0px;
+  text-decoration: none;
+}
+.boracomprar .preco .botaocompra{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.boracomprar .preco .botaocompra button{
+  width: 500px;
+  height: 50px;
+  background-color: #5a6171;
+  color: #ffffff;
+  border-radius: 5px;
   text-decoration: none;
 }
