@@ -255,3 +255,44 @@ height: 70px;
   letter-spacing: 0px;
   text-decoration: none;
 }
+.boracomprar .preco .outrasformas{
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.boracomprar .preco .outrasformas p{
+  color: #000;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size:  12px;
+  letter-spacing: 0px;
+  text-decoration: none;
+}
+.boracomprar .preco .botaocompra{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.boracomprar .preco .botaocompra button{
+  width: 500px;
+  height: 50px;
+  background-color: #5a6171;
+  color: #ffffff;
+  border-radius: 5px;
+  text-decoration: none;
+}
+.boracomprar .preco .botaocompra2{
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.boracomprar .preco .botaocompra2 button{
+  width: 500px;
+  height: 50px;
+  background-color:#ffa300;
+  color: #ffffff;
+  border-radius: 5px;
+  text-decoration: none;
+}

@@ -187,8 +187,10 @@ nav ul li a{
 /* Box nova*/
 .box-central{
   display: flex;
+  justify-content: center;
+  align-items: center;
  }
- .box{
+.box{
    position:relative;
    width: 25%;
    height: 349px;
@@ -196,15 +198,14 @@ nav ul li a{
    justify-content: center;
    align-items: center;
    margin: 40px;
-   margin-left: 4.1%;
    margin-top: 100px;
    transition: 0.5s;
    background: #310000;
  }
- .box:hover{
+.box:hover{
    height: 400px;
  }
- .box::before{
+.box::before{
    content: "";
    position: absolute;
    top: -2px;
