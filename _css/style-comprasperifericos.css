@@ -194,127 +194,64 @@ nav ul li a{
   height: 4px;
 }
 /*Fim da linha de separação*/
-
-/* Box nova*/
-.box-central{
- display: flex;
-}
-.box{
-  position:relative;
-  width: 20%;
-  height: 349px;
+.boracomprar{
   display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 40px;
-  margin-top: 100px;
-  transition: 0.5s;
-  background: #310000;
+  margin-top: 20px;
+  margin-left: 19px;
+  margin-right: 19px;
+  background-color: white;
+  height: 600px;
 }
-.box:hover{
-  height: 400px;
-}
-.box::before{
-  content: "";
-  position: absolute;
-  top: -2px;
-  left:-2px;
-  right: -2px;
-  bottom: -2px;
-  background: #fff;
-  z-index: -1;
-}
-.box::after{
-  content: "";
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  right: -2px;
-  bottom: -2px;
-  background: #fff;
-  z-index:-2;
-  filter: blur(40px);
-}
-.box .content{
-  position: absolute;
-  bottom: 0;
-  bottom: 217px;
-  height: 90px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  opacity: 0;
-  transition: 0.5s;
-}
-.box:hover .content {
-  opacity: 1;
-}
-.box .c {
-  position: absolute;
-  bottom: -3px;
-  left: 5px;
-  right: 5px;
-  margin-bottom: 7px;
-  justify-content: center;
-  align-items: center;
-  text-align: justify;
-  opacity: 0;
-}
-.box:hover .c {
-  opacity: 1;
-}
-
-.box .c p span {
-  font-size: 10px;
-  color: #FFF;
-  letter-spacing: 1px;
-
-}
-.box .imgBx{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+.boracomprar .imgpc{
+  width: 70%;
   padding: 7px;
   box-sizing: border-box;
 
 }
-.box .imgBx img{
-  max-width: 100%;
-  opacity: 1;
-  transition: 0.5s; 
+.boracomprar .imgpc img{
+  max-width: 100%; 
 }
-.box:hover .botao{
-  opacity: 1;
-}
-.box .botao{
+.boracomprar .preco .pp-central{
   display: flex;
-  position: absolute;
-  bottom: 5px;
-  left: 5px;
-  right: 5px;
+}
+.boracomprar .preco .pp-central .pp1{
+  display: flex;
+  margin-bottom: -10px;
   justify-content: center;
   align-items: center;
-  text-align: justify;
-  opacity: 0;
-  border-radius: 9px;
 }
-.box .botao .compra{
-  background-color: green;
-  color: #fff;
+.boracomprar .preco .pp-central .pp1 img{
+width: 70px;
+height: 70px;
 }
-.box .botao a {
-  color: #f2efeb;
+.boracomprar .preco .pp-central .pp1 p{
+  color: #000;
   text-transform: uppercase;
   font-weight: 700;
-  font-size: 10px;
+  font-size:  12px;
+  letter-spacing: 0px;
+  text-decoration: none;
+  
+}
+.boracomprar .preco .pp-central .pp2{
+  display: flex;
+  margin-bottom: -10px;
+  margin-left: 30px;
+  justify-content: center;
+  align-items: center;
+}
+.boracomprar .preco .pp-central .pp2 img{
+justify-content: center;
+align-items: center;
+width: 70px;
+height: 70px;
+}
+
+.boracomprar .preco .pp-central .pp2 p{
+  color: #000;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size:  12px;
   letter-spacing: 0px;
   text-decoration: none;
 }
-.box:before,
-.box:after {
-  background: linear-gradient(235deg, #FF2400, #010615, #ffa500);
-}
-/*Fim da box nova*/
