@@ -197,7 +197,8 @@ nav ul li a{
 
 /* Box nova*/
 .box-central{
- display: flex;
+  max-width: 100%;
+  display: flex;
 }
 .box{
   position:relative;
@@ -315,6 +316,124 @@ nav ul li a{
 }
 .box:before,
 .box:after {
+  background: linear-gradient(235deg, #FF2400, #010615, #ffa500);
+}
+.box2{
+  position:relative;
+  width: 20%;
+  height: 349px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px;
+  margin-top: 100px;
+  transition: 0.5s;
+  background: #310000;
+}
+.box2:hover{
+  height: 400px;
+}
+.box2::before{
+  content: "";
+  position: absolute;
+  top: -2px;
+  left:-2px;
+  right: -2px;
+  bottom: -2px;
+  background: #fff;
+  z-index: -1;
+}
+.box2::after{
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: #fff;
+  z-index:-2;
+  filter: blur(40px);
+}
+.box2 .content{
+  position: absolute;
+  bottom: 0;
+  bottom: 217px;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  opacity: 0;
+  transition: 0.5s;
+}
+.box2:hover .content {
+  opacity: 1;
+}
+.box2 .c {
+  position: absolute;
+  bottom: -3px;
+  left: 5px;
+  right: 5px;
+  margin-bottom: 7px;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+  opacity: 0;
+}
+.box2:hover .c {
+  opacity: 1;
+}
+
+.box2 .c p span {
+  font-size: 10px;
+  color: #FFF;
+  letter-spacing: 1px;
+
+}
+.box2 .imgBx{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 7px;
+  box-sizing: border-box;
+
+}
+.box2 .imgBx img{
+  filter: blur(9px);
+  max-width: 100%;
+  opacity: 1;
+  transition: 0.5s; 
+}
+.box2:hover .botao{
+  opacity: 1;
+}
+.box2 .botao{
+  display: flex;
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  right: 5px;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+  opacity: 0;
+  border-radius: 9px;
+}
+.box2 .botao .compra{
+  background-color: #ff2400;
+}
+.box2 .botao a {
+  color: #f2efeb;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 10px;
+  letter-spacing: 0px;
+  text-decoration: none;
+}
+.box2:before,
+.box2:after {
   background: linear-gradient(235deg, #FF2400, #010615, #ffa500);
 }
 /*Fim da box nova*/

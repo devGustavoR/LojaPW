@@ -236,5 +236,5 @@ nav ul li a{
 }
 /*Fim da linha de separação*/
 .fotos img{
-width: 100%;
+max-width: 100%;
 }
