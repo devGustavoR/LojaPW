@@ -243,7 +243,7 @@ nav ul li a{
  }
  .box .boxtext {
    position: absolute;
-   bottom: -3px;
+   bottom: 6px;
    left: 5px;
    right: 5px;
    margin-bottom: 7px;
@@ -263,11 +263,10 @@ nav ul li a{
  
  }
  .box .imgBx{
-   position: absolute;
    top: 0;
    left: 0;
    margin-top: 15%;
-   margin-left: 33.3%;
+   margin-left: 25%;
    width: 100%;
    height: 100%;
    padding: 7px;
@@ -276,6 +275,7 @@ nav ul li a{
  }
  .box .imgBx img{
    max-width: 100%;
+   height: 190px;
    opacity: 1;
    transition: 0.5s; 
  }
@@ -285,7 +285,7 @@ nav ul li a{
  .box .botao{
    display: flex;
    position: absolute;
-   bottom: 5px;
+   bottom: 0px;
    left: 5px;
    right: 5px;
    justify-content: center;

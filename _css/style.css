@@ -16,6 +16,11 @@ html {
 nav{
   padding: 9px;
 }
+.logo img {
+  margin: -20px 0 -10px 0;
+  width: 140px;
+  height: 70px;
+}
 .logo {
   float: left;
   padding: 8px;
@@ -236,5 +241,5 @@ nav ul li a{
 }
 /*Fim da linha de separação*/
 .fotos img{
-max-width: 100%;
+  width: 100%;
 }
