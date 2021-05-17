@@ -22,15 +22,16 @@
   <div class="container">
     <div class="forms-container">
       <div class="signin-signup">
-        <form action="" class="sign-in-form">
+        <form action="./control/ctr-funcionario.php" class="sign-in-form" method="POST">
+          <input type="hidden" name="validar">
           <h2 class="title">Login</h2>
           <div class="input-field">
             <i class="fas fa-user"></i>
-            <input type="text" placeholder="Usuário">
+            <input type="text" placeholder="Usuário" name="txtLogin">
           </div>
           <div class="input-field">
             <i class="fas fa-lock"></i>
-            <input type="password" placeholder="Senha">
+            <input type="password" placeholder="Senha" name="txtSenha">
           </div>
           <input type="submit" value="Login" class="btn solid">
 
@@ -49,7 +50,7 @@
         </form>
 
         <form action="" class="sign-up-form">
-          <h2 class="title">Cadastro</h2>
+          <h2 class="title" disabled>Cadastro</h2>
           <div class="input-field">
             <i class="fas fa-user"></i>
             <input type="text" placeholder="Usuário">

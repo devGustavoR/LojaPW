@@ -247,4 +247,68 @@ nav ul li a{
   width: 20px;
 }
 
-/*Modal*/
+/*Tabela*/
+.centralizar{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lista h3{
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content-tabela{
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  min-width: 400px;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px RGBA(241,109,32,0.93);
+}
+
+.content-tabela thead tr{
+  background-color: #F16D20;
+  color: #fff;
+  text-align: left;
+  font-weight: bold;
+}
+
+.content-tabela th,
+.content-tabela td{
+  padding: 12px 15px;
+}
+
+.content-tabela tbody tr{
+  color: #fff;
+  border-bottom: 1px solid #dddddddd;
+}
+
+.content-tabela tbody tr:nth-of-type(even){
+  background-color: #f3f3f3;
+}
+
+.content-tabela tbody tr:last-of-type{
+  border-bottom: 2px solid #F16D20;
+}
+
+.content-tabela thead button{
+  cursor: pointer;
+  float: right;
+  background-color: #F16D20;
+  color: #fff;
+  border-radius: 5px 5px 5px 5px;
+  overflow: hidden;
+  
+}
+
+.content-tabela thead button:hover{
+  cursor: pointer;
+  box-shadow: 0 0 20px RGBA(241,109,32,0.4);
+  transition: transform 150ms;
+  transform: scale(1.03);
+}
