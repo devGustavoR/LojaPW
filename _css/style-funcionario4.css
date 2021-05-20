@@ -289,26 +289,76 @@ nav ul li a{
 }
 
 .content-tabela tbody tr:nth-of-type(even){
-  background-color: #f3f3f3;
+  background-color: #000;
 }
 
 .content-tabela tbody tr:last-of-type{
   border-bottom: 2px solid #F16D20;
 }
 
-.content-tabela thead button{
+
+/*Fim da tabela*/
+
+/*Botão novo na tabela*/
+.btn{
   cursor: pointer;
   float: right;
-  background-color: #F16D20;
+  background-color:#F16D20;
   color: #fff;
+  border: none;
   border-radius: 5px 5px 5px 5px;
-  overflow: hidden;
-  
+  text-decoration: none;
 }
 
-.content-tabela thead button:hover{
+.btn:hover{
   cursor: pointer;
   box-shadow: 0 0 20px RGBA(241,109,32,0.4);
   transition: transform 150ms;
   transform: scale(1.03);
 }
+
+.btn[disabled]:hover{
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+/*Fim do botão*/
+
+/*Modal*/
+.modal-bg{
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top:0;
+  left: 0;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0,5s;
+}
+
+.bg-active{
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal{
+  background-color: #fff;
+  width: 30%;
+  height: 30%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
+.modal button{
+  padding: 10px 30px;
+  background-color: #F16D20;
+  color: #000;
+  cursor: pointer;
+}
+/*Fim do modal*/

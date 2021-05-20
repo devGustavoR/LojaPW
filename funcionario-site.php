@@ -12,8 +12,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PW Gamer | A sua loja Gamer 24h</title>
   <!--File CSS-->
-  <link rel="stylesheet" href="./_css/style-funcionario.css">
+  <link rel="stylesheet" href="./_css/style-funcionario4.css">
   <!-- Bootstrap CSS -->
+  
   <!--Icon-->
   <link rel="shortcut icon" href="./_conteúdos/_imagens/-2PLwAS8j6Eu2oXNHv_BVmyZTWVhvnNPcCYAr9JnzD0.png" type="image/x-icon">
 </head>
@@ -60,7 +61,9 @@
       <thead>
         <tr>
           <th colspan="5">
-            <button type="button">Novo</button>
+            <div class="botao">
+              <a href="./cadastro.html" class="btn">Novo</a>
+            </div>
           </th>
         </tr>
         <tr>
@@ -83,7 +86,15 @@
               <td><?php echo($objFunc['id'])?></td>
               <td><?php echo($objFunc['nome'])?></td>
               <td><?php echo($objFunc['cpf'])?></td>
-              <td>Editar</td>
+              <td>
+                <button
+                data-id="<?php echo($objFunc['id'])?>"
+                data-nome="<?php echo($objFunc['nome'])?>"
+                data-cpf="<?php echo($objFunc['cpf'])?>"
+                data-login="<?php echo($objFunc['login'])?>"
+                data-senha="<?php echo($objFunc['senha'])?>"
+                class="modal-btn" id="edicaoFunc">Editar</button>
+              </td>
               <td>Deletar</td>
             </tr>
         <?php } ?>
@@ -91,6 +102,20 @@
    </table>
   </div>
  </div>
-  <script src="./_js/index.js"></script>
+ <div class="modal-bg">
+   <div class="modal">
+     <h2>Edição</h2>
+     <label for="nome">Nome:</label>
+     <input type="text" name="txtNome">
+     <label for="senha">CPF:</label>
+     <input type="text" name="txtCPF">
+     <label for="login">Login:</label>
+     <input type="text" name="txtLogin">
+     <label for="senha">Senha:</label>
+     <input type="text" name="txtSenha">
+     <button class="btn">Editar</button>
+   </div>
+ </div>
+  <script src="./_js/edição.js"></script>
 </body>
 </html>
