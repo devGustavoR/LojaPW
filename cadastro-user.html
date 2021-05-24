@@ -16,31 +16,42 @@
    <script src="https://kit.fontawesome.com/64d58efce2.js"crossorigin="anonymous"></script>
 </head>
 <body>
-  <div class="container" id="edicaoFunc">
+  <div class="container">
     <div class="forms-container">
       <div class="signin-signup">
-        <form action="./control/ctr-funcionario.php" class="sign-in-form" method="POST">
-          <input type="hidden" name="editar" id="recipient-id">
-          <h2 class="title">Editar</h2>
+        <form action="./control/ctr-cliente.php" class="sign-in-form" method="POST">
+          <input type="hidden" name="insert">
+          <h2 class="title">Cadastro</h2>
           <div class="input-field">
             <i class="fas fa-user"></i>
-            <input type="text" placeholder="Nome" name="txtNome" id="recipient-nome" required>
+            <input type="text" placeholder="Nome" name="txtNome" required>
           </div>
           <div class="input-field">
             <i class="fas fa-hashtag"></i>
-            <input type="text" placeholder="CPF" name="txtCPF" id="recipient-cpf" required>
+            <input type="text" placeholder="CPF" name="txtCPF" required>
           </div>
           <div class="input-field">
             <i class="fas fa-user"></i>
-            <input type="text" placeholder="Login" name="txtLogin" id="recipient-login" required>
+            <input type="text" placeholder="Login" name="txtLogin" required>
           </div>
           <div class="input-field">
             <i class="fas fa-lock"></i>
-            <input type="password" placeholder="Senha" name="txtSenha" id="recipient-senha" required>
+            <input type="password" placeholder="Senha" name="txtSenha" required>
           </div>
-          <input type="submit" value="Login" class="btn solid">
+          <input type="submit" value="Cadastro" class="btn solid">
 
-          
+          <p class="social-text">Gostaria de se conectar por alguma plataforma?</p>
+          <div class="social-media">
+            <a href="#" class="social-icon">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="social-icon">
+              <i class="fab fa-google"></i>
+            </a>
+            <a href="#" class="social-icon">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </div>
         </form>
       </div>
     </div>
@@ -48,14 +59,11 @@
     <div class="panels-container">
       <div class="panel left-panel">
         <div class="content">
-        <h3>ACESSO RESTRITO</h3>
-
-        <!--<img src="./_conteúdos/_imagens/-2PLwAS8j6Eu2oXNHv_BVmyZTWVhvnNPcCYAr9JnzD0.png" alt="" class="image">-->
+        <h3>Cadastro</h3>
         </div>
       </div>
     </div>
-
   </div>
-  <script src="./_js/edição.js"></script>
+  </div>
 </body>
 </html>

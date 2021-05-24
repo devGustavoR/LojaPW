@@ -1,7 +1,7 @@
 <?php
 
-  require_once './model/funcionario.php';
-  $objFunc = new Funcionario;
+  require_once './model/produto.php';
+  $objFunc = new Produto;
 
 ?>
 <!DOCTYPE html>
@@ -23,13 +23,14 @@
 <div class="centralizar">
   <div class="lista">
    <br>
-   <h3>Área de edição e exclusão de funcionário</h3>
+   <h3>Área de edição e exclusão dos produtos</h3>
    <table class="content-tabela">
       <thead>
         <tr>
-          <th>ID</th>
-          <th>Nome</th>
-          <th>CPF</th>
+        <th>ID</th>
+          <th>Produto</th>
+          <th>Descrição</th>
+          <th>Valor</th>
           <th>Editar</th>
           <th>Deletar</th>
         </tr>
@@ -37,30 +38,30 @@
 
       <tbody class="dados">
         <?php
-          $query = "SELECT * from funcionario";
+          $query = "SELECT * from produto";
           $stmt = $objFunc->runQuery($query);
           $stmt->execute();
           while($objFunc = $stmt->fetch(PDO::FETCH_ASSOC)){
         ?>
             <tr>
               <td><?php echo($objFunc['id'])?></td>
-              <td><?php echo($objFunc['nome'])?></td>
-              <td><?php echo($objFunc['cpf'])?></td>
+              <td><?php echo($objFunc['produto'])?></td>
+              <td><?php echo($objFunc['descricao'])?></td>
+              <td><?php echo($objFunc['valor'])?></td>
               <td>
                 <button class="btn2 btn-sucess"
                 data-toggle="modal" data-target="#ModalEditar"
                 data-id="<?php echo ($objFunc['id']);?>"
-                data-nome="<?php echo($objFunc['nome']);?>"
-                data-cpf="<?php echo($objFunc['cpf']);?>"
-                data-login="<?php echo($objFunc['login']);?>"
-                data-senha="<?php echo($objFunc['senha']);?>"
+                data-produto="<?php echo($objFunc['produto']);?>"
+                data-descricao="<?php echo($objFunc['descricao']);?>"
+                data-valor="<?php echo($objFunc['valor']);?>"
                 id="edicaoFunc">Editar</button>
               </td> 
               <td>
                 <button class="btn2 bnt-danger"
                 data-toggle="modal" data-target="#ModalDeletar" 
                 data-id="<?php echo ($objFunc['id']);?>"
-                data-nome="<?php echo($objFunc['nome'])?>">
+                data-produto="<?php echo($objFunc['produto'])?>">
                   Deletar
                 </button>
               </td> 
@@ -83,24 +84,20 @@
 
       <!-- Modal body -->
       <div class="modal-body">
-      <form action="control/ctr-funcionario.php" method="POST">
+      <form action="./control/ctr-produto.php" method="POST">
        <input type="hidden" name="editar" id="recipient-id">
       <div class="form-group">
-       <label for="">Nome</label>
-        <input type="text" class="form-control" name="txtNome" id="recipient-nome" required>
+       <label for="">Nome do Produto</label>
+        <input type="text" class="form-control" name="txtProduto" id="recipient-produto" required>
        </div>
        <div class="form-group">
-       <label for="">CPF</label>
-       <input type="text" class="form-control" name="txtCPF" id="recipient-cpf" required>
+       <label for="">Descrição</label>
+       <input type="text" class="form-control" name="txtDesc" id="recipient-desc" required>
        </div>
        <div class="form-group">
-        <label for="">Login</label>
-       <input type="text" class="form-control" name="txtLogin" id="recipient-login" required>
+        <label for="">Valor</label>
+       <input type="text" class="form-control" name="txtValor" id="recipient-valor" required>
       </div>
-      <div class="form-group">
-      <label for="">Senha</label>
-      <input type="text" class="form-control" name="txtSenha" id="recipient-senha" required>
-       </div>
        <button type="submit" class="btn btn-primary">Enviar</button>
       </form>
       </div>
@@ -127,11 +124,11 @@
 
       <!-- Modal body -->
       <div class="modal-body">
-      <form action="control/ctr-funcionario.php" method="POST">
+      <form action="control/ctr-produto.php" method="POST">
        <input type="hidden" name="deletar" id="recipient-id">
       <div class="form-group">
         <label for="">Nome</label>
-        <input type="text" class="form-control" name="txtNome" id="recipient-nome" readonly>
+        <input type="text" class="form-control" name="txtProduto" id="recipient-produto" readonly>
        </div>
        <button type="submit" class="btn2 btn-primary">Deletar </button>
       </form>
@@ -145,6 +142,7 @@
     </div>
   </div>
 </div>
+
 <!-- jQuery library -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
@@ -158,17 +156,15 @@
   $('#ModalEditar').on('show.bs.modal', function(event){
     var button = $(event.relatedTarget)
     var recipientId = button.data('id')
-    var recipientNome = button.data('nome')
-    var recipientCpf = button.data('cpf')
-    var recipientLogin = button.data('login')
-    var recipientSenha = button.data('senha')
+    var recipientProduto = button.data('produto')
+    var recipientDesc = button.data('descricao')
+    var recipientValor = button.data('valor')
 
     var modal = $(this)
     modal.find('#recipient-id').val(recipientId)
-    modal.find('#recipient-nome').val(recipientNome)
-    modal.find('#recipient-cpf').val(recipientCpf)
-    modal.find('#recipient-login').val(recipientLogin)
-    modal.find('#recipient-senha').val(recipientSenha)
+    modal.find('#recipient-produto').val(recipientProduto)
+    modal.find('#recipient-desc').val(recipientDesc)
+    modal.find('#recipient-valor').val(recipientValor)
 })
 </script>
 
@@ -176,11 +172,11 @@
   $("#ModalDeletar").on('show.bs.modal', function(event){
     var button = $(event.relatedTarget)
     var recipientId = button.data('id')
-    var recipientNome = button.data('nome')  
+    var recipientProduto = button.data('produto') 
     
     var modal= $(this)
     modal.find('#recipient-id').val(recipientId)
-    modal.find('#recipient-nome').val(recipientNome)
+    modal.find('#recipient-produto').val(recipientProduto)
   })
 </script>
 </body>

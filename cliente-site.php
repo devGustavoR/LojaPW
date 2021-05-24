@@ -1,7 +1,7 @@
 <?php
 
-  require_once './model/funcionario.php';
-  $objFunc = new Funcionario;
+  require_once './model/cliente.php';
+  $objFunc = new Cliente;
 
 ?>
 <!DOCTYPE html>
@@ -57,13 +57,13 @@
  <div class="centralizar">
   <div class="lista">
    <br>
-   <h3>Funcionários</h3>
+   <h3>Clientes</h3>
    <table class="content-tabela">
       <thead>
         <tr>
           <th colspan="5">
             <div class="botao">
-              <a href="./cadastro.html" class="btn">Novo</a>
+              <a href="./cadastro-user.html" class="btn">Novo</a>
             </div>
           </th>
         </tr>
@@ -78,7 +78,7 @@
 
       <tbody class="dados">
         <?php
-          $query = "select * from funcionario";
+          $query = "select * from cliente";
           $stmt = $objFunc->runQuery($query);
           $stmt->execute();
           while($objFunc = $stmt->fetch(PDO::FETCH_ASSOC)){
@@ -88,11 +88,11 @@
               <td><?php echo($objFunc['nome'])?></td>
               <td><?php echo($objFunc['cpf'])?></td>
               <td>
-                <a href="./editar.php"
+                <a href="./editar-cliente.php"
                 class="btn" id="edicaoFunc">Editar</a>
               </td>
               <td>
-                <a href="./editar.php" class="btn" id="edicaoFunc">Deletar</a>
+                <a href="./editar-cliente.php" class="btn" id="edicaoFunc">Deletar</a>
                 </td>
             </tr>
         <?php } ?>

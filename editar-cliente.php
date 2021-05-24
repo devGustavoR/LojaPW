@@ -1,7 +1,7 @@
 <?php
 
-  require_once './model/funcionario.php';
-  $objFunc = new Funcionario;
+  require_once './model/cliente.php';
+  $objFunc = new Cliente;
 
 ?>
 <!DOCTYPE html>
@@ -23,7 +23,7 @@
 <div class="centralizar">
   <div class="lista">
    <br>
-   <h3>Área de edição e exclusão de funcionário</h3>
+   <h3>Área de edição e exclusão de cliente</h3>
    <table class="content-tabela">
       <thead>
         <tr>
@@ -37,7 +37,7 @@
 
       <tbody class="dados">
         <?php
-          $query = "SELECT * from funcionario";
+          $query = "SELECT * from cliente";
           $stmt = $objFunc->runQuery($query);
           $stmt->execute();
           while($objFunc = $stmt->fetch(PDO::FETCH_ASSOC)){
@@ -83,7 +83,7 @@
 
       <!-- Modal body -->
       <div class="modal-body">
-      <form action="control/ctr-funcionario.php" method="POST">
+      <form action="control/ctr-cliente.php" method="POST">
        <input type="hidden" name="editar" id="recipient-id">
       <div class="form-group">
        <label for="">Nome</label>
@@ -121,13 +121,13 @@
 
       <!-- Modal Header -->
       <div class="modal-header">
-        <h4 class="modal-title">Deletar Funcionario</h4>
+        <h4 class="modal-title">Deletar Cliente</h4>
         <button type="button" class="close" data-dismiss="modal">&times;</button>
       </div>
 
       <!-- Modal body -->
       <div class="modal-body">
-      <form action="control/ctr-funcionario.php" method="POST">
+      <form action="control/ctr-cliente.php" method="POST">
        <input type="hidden" name="deletar" id="recipient-id">
       <div class="form-group">
         <label for="">Nome</label>

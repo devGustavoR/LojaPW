@@ -1,13 +1,13 @@
 <?php
-  require_once '../model/funcionario.php';
-  $objFunc = new Funcionario();
+  require_once '../model/cliente.php';
+  $objFunc = new Cliente();
 
   if(isset($_POST['validar'])){
     $login = $_POST['txtLogin'];
     $senha = $_POST['txtSenha'];
 
     if($objFunc->validar($login, $senha)){
-      $objFunc->redirect('../funcionario-site.php');
+      $objFunc->redirect('../cliente-site.php');
     }else{
       $objFunc->redirect('../index.html');
     }
@@ -20,7 +20,7 @@
     $senha = $_POST['txtSenha'];
 
     if($objFunc->inserir($nome, $cpf, $login, $senha)){
-      $objFunc->redirect("../funcionario-site.php");
+      $objFunc->redirect('../cliente-site.php');
     }
   }
 
@@ -32,14 +32,14 @@
     $senha = $_POST['txtSenha'];
 
     if($objFunc->editar($nome,$cpf,$login,$senha,$id)){
-      $objFunc->redirect("../funcionario-site.php");
+      $objFunc->redirect("../cliente-site.php");
     }
   }
 
   if(isset($_POST['deletar'])){
     $id = $_POST['deletar'];
     if($objFunc->deletar($id)){
-      $objFunc->redirect("../funcionario-site.php");
+      $objFunc->redirect("../cliente-site.php");
     }
   }
 

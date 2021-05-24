@@ -234,5 +234,5 @@ nav ul li a{
 .txtprogramadores2 h2{
   font-size: 15px;
   margin: auto;
-  margin-left: 15px;
+  display: flex;  
 }

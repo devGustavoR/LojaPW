@@ -1,7 +1,7 @@
 <?php
 
-  require_once './model/funcionario.php';
-  $objFunc = new Funcionario;
+  require_once './model/produto.php';
+  $objFunc = new Produto;
 
 ?>
 <!DOCTYPE html>
@@ -57,20 +57,21 @@
  <div class="centralizar">
   <div class="lista">
    <br>
-   <h3>Funcionários</h3>
+   <h3>Produtos</h3>
    <table class="content-tabela">
       <thead>
         <tr>
-          <th colspan="5">
+          <th colspan="7">
             <div class="botao">
-              <a href="./cadastro.html" class="btn">Novo</a>
+              <a href="./cadastro-de-produtos.php" class="btn">Novo</a>
             </div>
           </th>
         </tr>
         <tr>
           <th>ID</th>
-          <th>Nome</th>
-          <th>CPF</th>
+          <th>Produto</th>
+          <th>Descrição</th>
+          <th>Valor</th>
           <th>Editar</th>
           <th>Deletar</th>
         </tr>
@@ -78,21 +79,22 @@
 
       <tbody class="dados">
         <?php
-          $query = "select * from funcionario";
+          $query = "select * from produto";
           $stmt = $objFunc->runQuery($query);
           $stmt->execute();
           while($objFunc = $stmt->fetch(PDO::FETCH_ASSOC)){
         ?>
             <tr>
               <td><?php echo($objFunc['id'])?></td>
-              <td><?php echo($objFunc['nome'])?></td>
-              <td><?php echo($objFunc['cpf'])?></td>
+              <td><?php echo($objFunc['produto'])?></td>
+              <td><?php echo($objFunc['descricao'])?></td>
+              <td><?php echo($objFunc['valor'])?></td>
               <td>
-                <a href="./editar.php"
+                <a href="./editar-produtos.php"
                 class="btn" id="edicaoFunc">Editar</a>
               </td>
               <td>
-                <a href="./editar.php" class="btn" id="edicaoFunc">Deletar</a>
+                <a href="./editar-produtos.php" class="btn" id="edicaoFunc">Deletar</a>
                 </td>
             </tr>
         <?php } ?>

@@ -1,7 +1,7 @@
 <?php
-  require_once 'conexao.php';
+  include_once 'conexao.php';
 
-  class Funcionario{
+  class Cliente{
     private $conn;
 
     public function __construct()
@@ -11,10 +11,9 @@
 
       $this->conn = $db;
     }
-
-    public function inserir($nome, $cpf, $login, $senha){
+    public function inserir($nome, $cpf,$login, $senha){
       try{
-        $sql = "INSERT INTO funcionario(nome, cpf, login, senha)
+        $sql = "INSERT INTO cliente(nome, cpf,login, senha)
         VALUE(:nome, :cpf, :login, :senha)";
 
         $stmt = $this->conn->prepare($sql);
@@ -39,7 +38,7 @@
     public function validar($login, $senha){
 
       try{
-        $sql = "SELECT * from funcionario where login= :login and senha = :senha";
+        $sql = "SELECT * from cliente where login= :login and senha = :senha";
         $stmt = $this->conn->prepare($sql);
         $stmt->bindParam(":login", $login);
         $stmt->bindParam(":senha", $senha);
@@ -63,7 +62,7 @@
 
     public function editar($nome, $cpf, $login, $senha, $id){
       try{
-        $sql = "UPDATE funcionario SET nome = :nome, cpf= :cpf, 
+        $sql = "UPDATE cliente SET nome = :nome, cpf= :cpf, 
         login= :login, senha= :senha WHERE id = :id";
 
         $stmt = $this->conn->prepare($sql);
@@ -86,7 +85,7 @@
 
     public function deletar($id){
       try{
-        $sql = "DELETE FROM funcionario WHERE id = :id";
+        $sql = "DELETE FROM cliente WHERE id = :id";
 
         $stmt = $this->conn->prepare($sql);
         $stmt->bindParam(":id", $id);
@@ -112,4 +111,5 @@
       header("Location: $url");
     }
   }
+
 ?>
