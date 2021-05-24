@@ -39,7 +39,7 @@
     public function validar($login, $senha){
 
       try{
-        $sql = "Select * from funcionario where login= :login and senha = :senha";
+        $sql = "SELECT * from funcionario where login= :login and senha = :senha";
         $stmt = $this->conn->prepare($sql);
         $stmt->bindParam(":login", $login);
         $stmt->bindParam(":senha", $senha);
@@ -61,9 +61,10 @@
       
     }
 
-    public function editar($nome, $cpd, $login, $senha, $id){
+    public function editar($nome, $cpf, $login, $senha, $id){
       try{
-        $sql = "UPDATE funcionario SET nome =:nome, cpf= :cpf, login= :login, senha= :senha where id= :id";
+        $sql = "UPDATE funcionario SET nome =:nome, cpf= :cpf, 
+        login= :login, senha= :senha WHERE id= :id";
 
         $stmt = $this->conn->prepare($sql);
         $stmt->bindParam(":nome", $nome);

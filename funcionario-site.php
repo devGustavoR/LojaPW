@@ -1,6 +1,6 @@
 <?php
 
-  require_once'./model/funcionario.php';
+  require_once './model/funcionario.php';
   $objFunc = new Funcionario;
 
 ?>
@@ -19,6 +19,7 @@
   <link rel="shortcut icon" href="./_conteúdos/_imagens/-2PLwAS8j6Eu2oXNHv_BVmyZTWVhvnNPcCYAr9JnzD0.png" type="image/x-icon">
 </head>
 <body>
+  <!--PHP-->
   <!--Navegação-->
   <div class="container">
     <nav>
@@ -87,35 +88,23 @@
               <td><?php echo($objFunc['nome'])?></td>
               <td><?php echo($objFunc['cpf'])?></td>
               <td>
-                <button
-                data-id="<?php echo($objFunc['id'])?>"
+                <a href="./editar.php"
+                data-id="<?php echo ($objFunc["id"]);?>"
                 data-nome="<?php echo($objFunc['nome'])?>"
                 data-cpf="<?php echo($objFunc['cpf'])?>"
                 data-login="<?php echo($objFunc['login'])?>"
                 data-senha="<?php echo($objFunc['senha'])?>"
-                class="modal-btn" id="edicaoFunc">Editar</button>
+                class="btn" id="edicaoFunc">Editar</a>
               </td>
               <td>Deletar</td>
             </tr>
         <?php } ?>
       </tbody>
+      
    </table>
   </div>
  </div>
- <div class="modal-bg">
-   <div class="modal">
-     <h2>Edição</h2>
-     <label for="nome">Nome:</label>
-     <input type="text" name="txtNome">
-     <label for="senha">CPF:</label>
-     <input type="text" name="txtCPF">
-     <label for="login">Login:</label>
-     <input type="text" name="txtLogin">
-     <label for="senha">Senha:</label>
-     <input type="text" name="txtSenha">
-     <button class="btn">Editar</button>
-   </div>
- </div>
   <script src="./_js/edição.js"></script>
+
 </body>
 </html>

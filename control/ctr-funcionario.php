@@ -1,6 +1,6 @@
 <?php
   require_once '../model/funcionario.php';
-  $objFunc = new Funcionario;
+  $objFunc = new Funcionario();
 
   if(isset($_POST['validar'])){
     $login = $_POST['txtLogin'];
