@@ -1,6 +1,6 @@
 # Projeto de Front-End: Site com HTML, CSS, JS e PHP
 
-[![GitHub contributors](https://img.shields.io/github/contributors/devgustavor/LojaPW)](https://github.com/devgustvor/LojaPW/graphs/contributors)
+[![GitHub contributors](https://img.shields.io/github/contributors/devgustavor/LojaPW)](https://github.com/devgustavor/LojaPW/graphs/contributors)
 [![GitHub stars](https://img.shields.io/github/stars/devgustavor/LojaPW)](https://github.com/devgustavor/LojaPW/stargazers)
 
 Este é o repositório do projeto de Front-End desenvolvido por mim e meu colega Matheus Ramos para o desafio proposto pelo nosso professor.
