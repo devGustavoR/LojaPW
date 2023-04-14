@@ -1,10 +1,7 @@
 # Projeto de Front-End: Site com HTML, CSS, JS e PHP
 
-[![GitHub contributors](https://img.shields.io/github/contributors/LojaPW/LojaPW)](https://github.com/LojaPW/LojaPW/graphs/contributors)
-[![GitHub issues](https://img.shields.io/github/issues/LojaPW/LojaPW)](https://github.com/LojaPW/LojaPW/issues)
-[![GitHub forks](https://img.shields.io/github/forks/LojaPW/LojaPW)](https://github.com/LojaPW/LojaPW/network)
-[![GitHub stars](https://img.shields.io/github/stars/LojaPW/LojaPW)](https://github.com/LojaPW/LojaPW/stargazers)
-[![GitHub license](https://img.shields.io/github/license/LojaPW/LojaPW)](https://github.com/LojaPW/LojaPW/blob/main/LICENSE)
+[![GitHub contributors](https://img.shields.io/github/contributors/devgustavor/LojaPW)](https://github.com/devgustvor/LojaPW/graphs/contributors)
+[![GitHub stars](https://img.shields.io/github/stars/devgustavor/LojaPW)](https://github.com/devgustavor/LojaPW/stargazers)
 
 Este é o repositório do projeto de Front-End desenvolvido por mim e meu colega Matheus Ramos para o desafio proposto pelo nosso professor.
 
