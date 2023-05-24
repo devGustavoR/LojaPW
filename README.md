@@ -34,8 +34,17 @@ O objetivo do site era criar uma loja virtual que vendesse produtos de informát
 
 O site foi desenvolvido seguindo a arquitetura MVC (Model-View-Controller). O modelo é responsável por gerenciar os dados do site, a visão cuida da apresentação do site ao usuário e o controlador faz a intermediação entre o modelo e a visão.
 
-## 🚀 Como rodar o projeto
+## 🚀 Para executar localmente
 
-1. Clone este repositório
-2. Abra o arquivo `index.html` em um navegador
+Clone o projeto
+
+```bash
+  git clone https://link-para-o-projeto
+```
+
+Abra o arquivo
+
+```bash
+  index.html
+```
 
